@@ -1,5 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     
     font-family: 'Roboto';
 
+}
+
+/* main containers */
+
+.main-container {
+    display: grid;
+    grid-template-columns: 33% 66%;
+    grid-template-rows: auto;
+}
+
+.right-container, .left-container{
+}
+
+.right-container {
+    background-color: aqua;
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+}
+
+.left-container {
+    background-color: green;
+}
+
+/* left main column */
+
+
+/* right main column (form column) */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.subtitle {
+    height: 50px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 8px;
+    height: 180px;
+}
+
+.form-container {
+    
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    margin-bottom: 14px;
+}
+
+label {
+    font-size: 12px;
+}
+
+.input-column {
+    display: grid;
+}
+
+.input-column > * {
+    width: 200px;
+}
+
+.submit-container {
+    margin: 8px;
+    background-color: aquamarine;
 }
