@@ -1,5 +1,14 @@
 /* color palette */
 
+:root {
+    --main-color: #badefc;
+    --secondary-color: #ffe0b5;
+    --button-color: #596d48;
+    --border-color: #e5e7eb;
+    --selected-item-border-color: #246eb9; 
+    --warning-color: #ca2e55;
+}
+
 /* Hunter green - 3e5641
 Chestnut - a24936
 Flame - d36135
@@ -13,7 +22,7 @@ body {
     
     font-family: 'Roboto';
 
-}
+}   
 
 /* main containers */
 
@@ -27,13 +36,13 @@ body {
 }
 
 .right-container {
-    background-color: #d36135;
+    background-color: var(--main-color);
     display: grid;
     grid-template-rows: 0.5fr 0.25fr 1fr 1fr;
 }
 
 .left-container {
-    background-image: url(/assets/halie-west-bTzpau9mKT4-unsplash.jpg);
+    background-image: url(assets/halie-west-bTzpau9mKT4-unsplash.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -98,7 +107,7 @@ body {
 }
 
 .form-container {
-    background-color: #a24936;
+    background-color: var(--secondary-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding-top: 18px;
 }
@@ -111,8 +120,13 @@ body {
 
 input {
     border-radius: 5px;
-    border: 1px solid lightgray;
+    border: 1px solid var(--border-color);
     margin-bottom: 14px;
+}
+
+input:focus {
+    box-shadow: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--selected-item-border-color);
 }
 
 label {
@@ -128,6 +142,10 @@ label {
     width: 200px;
 }
 
+input[type="email"]:invalid {
+    border-color: red;
+}
+
 .submit-container {
     padding-top: 18px;
 }
@@ -140,8 +158,8 @@ label {
     font-size: 18px;
     font-weight: 700;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    background-color: #3e5641;
-    border-color: #282b28;
+    background-color: var(--button-color);
+    border-color: var(--border-color);
     color: white;
 }
 
